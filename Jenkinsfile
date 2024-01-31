@@ -29,8 +29,8 @@ pipeline {
                 script {
                     docker.build("${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}")
                    /* docker.withRegistry("${DOCKER_REGISTRY}", 'docker-registry-credentials') {
-                        docker.image("${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}").push() */
-                    }
+                        docker.image("${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}").push()
+                    } */
                 }
             }
         }
