@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_REGION = 'us-east-1'
         AWS_ACCESS_KEY_ID = credentials('AKIAQ3LVIM6K5PRTGIO5')
-        AWS_SECRET_ACCESS_KEY = credentials('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')
+       // AWS_SECRET_ACCESS_KEY = credentials('fMvriOaBlXmW32keSIjZuvLBPBHIlXbsWy81GRpj')
         DOCKER_REGISTRY = 'docker.io'
         DOCKER_IMAGE_NAME = 'nginx-web-app'
         DOCKER_IMAGE_TAG = 'latest'
