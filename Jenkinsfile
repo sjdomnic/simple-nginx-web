@@ -35,13 +35,13 @@ pipeline {
             }
         }
 
-        stage('Deploy to CodeDeploy') {
+       /* stage('Deploy to CodeDeploy') {
             steps {
                 script {
                     sh 'aws deploy create-deployment --application-name ${CODEDEPLOY_APPLICATION_NAME} --deployment-group-name ${CODEDEPLOY_DEPLOYMENT_GROUP} --revision revisionType=AppSpecContent,content=appspec.yaml'
                 }
-            }
-        }
+            } 
+        } */
     }
 }
 
