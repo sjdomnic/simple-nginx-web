@@ -1,1 +1,1 @@
-# simple-nginx-web-
+# simple-nginx-web
