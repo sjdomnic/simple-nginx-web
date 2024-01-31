@@ -10,13 +10,16 @@ pipeline {
         DOCKER_IMAGE_TAG = 'latest'
         CODEDEPLOY_APPLICATION_NAME = 'Sample_Nginx'
         CODEDEPLOY_DEPLOYMENT_GROUP = 'Sample_Nginx_DG'
+        GITHUB_CREDENTIALS = credentials('github-access-token')
     }
 
     stages {
         stage('Checkout') {
             steps {
                 script {
-                    git 'https://github.com/sjdomnic/simple-nginx-web.git'
+                    //git 'https://github.com/sjdomnic/simple-nginx-web.git'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/sjdomnic/simple-nginx-web.git', credentialsId: GITHUB_CREDENTIALS]]])
+
                 }
             }
         }
